@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python_lessons"
+version = "0.1.0"
+description = "Just a learning project"
+authors = ["Leonardo HG <leonardohg.ipn@gmil.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
