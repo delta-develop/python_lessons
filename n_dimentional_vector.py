@@ -20,16 +20,8 @@ class Vector:
         
         return resultant_vector
 
-    def __iadd__(self, vector2):
-        
-        if len(self.components) != len(vector2.components):
-            raise Exception("Dimentional error")
-
-        resultant_vector = Vector()
-        for vector_1_comp, vector_2_comp in zip(self.components, vector2.components):
-            resultant_vector.append(vector_1_comp + vector_2_comp)
-        
-        return resultant_vector
+    def __repr__(self) -> str:
+        return f"{self.components}"
 
 
     def append(self,value):
@@ -43,8 +35,11 @@ class Vector:
         return f"{self.components}"
 
 if __name__ == "__main__":
-    v1 = Vector(2,4,3,5,2,4,6)
-    v2 = Vector(5,31,3,1,4,1,1)
+    v1 = Vector(1,2,3)
+    v2 = Vector(-1,-2,-3)
     v3 = v1 + v2
-    
     print(v3)
+    v3 += v1
+    print(v3)
+    
+    
