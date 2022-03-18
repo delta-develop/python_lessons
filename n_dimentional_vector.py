@@ -9,13 +9,13 @@ class Vector:
             print(e)
         
     
-    def __add__(self, vector2):
+    def __add__(vector1, vector2):
         
-        if len(self.components) != len(vector2.components):
+        if len(vector1.components) != len(vector2.components):
             raise Exception("Dimentional error")
 
         resultant_vector = Vector()
-        for vector_1_comp, vector_2_comp in zip(self.components, vector2.components):
+        for vector_1_comp, vector_2_comp in zip(vector1.components, vector2.components):
             resultant_vector.append(vector_1_comp + vector_2_comp)
         
         return resultant_vector
